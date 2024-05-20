@@ -156,12 +156,9 @@ class Moto {
         }
         if($this->darPrecioVenta() == -1){
             $statusPrecio = "NO DISPONIBLE";
-        }else {
-            $statusPrecio = $this->darPrecioVenta();
         }
         return  "CODIGO: " . $this->getCodigo() . "\n" .
-        "COSTO SIN INCREMENTO: " . $this->getCosto()	 . "\n" .
-        "COSTO INCREMENTADO (porcentaje incremento anual): " . $statusPrecio . "\n" .
+        "COSTO (+porcentaje incremento anual): " . $this->darPrecioVenta() . "\n" .
         "AÑO DE FABRICACION: " . $this->getAnioFabricacion() . "\n" .
         "DESCRIPCION: " . $this->getDescripcionMoto() . "\n" .
         "PORCENTAJE DE INCREMENTO ANUAL: " . $this->getPorcentajeIncAnual() . "\n" .

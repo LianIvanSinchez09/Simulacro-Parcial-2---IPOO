@@ -8,8 +8,8 @@ include_once 'MotoImportada.php';
 
 
 
-$objCliente1 = new Cliente("Lian", "Sinchez", false, "Desarrollador", 1011121314);
-$objCliente2 = new Cliente("Luciana", "Sinchez", true, "Peluquera", 123456789);
+$objCliente1 = new Cliente("Lian", "Sinchez", true, "Desarrollador", 1011121314);
+$objCliente2 = new Cliente("Luciana", "Sinchez", false, "Peluquera", 123456789);
 
 $objMoto1 = new MotoNacional(11, 2230000, 2022, "Benelli Imperiale 400", 0.85, true, 0.10);
 $objMoto2 = new MotoNacional(12, 584000, 2021, "Zanella Zr 150 Ohc", 0.70, true, 0.10);

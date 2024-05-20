@@ -178,9 +178,11 @@ class Empresa {
 
     public function informarVentasImportadas(){
         $colMotosImportadas = [];
-        foreach ($this->getColMotos() as $moto) {
-            if($moto instanceof MotoImportada){
-                $colMotosImportadas[] = $moto;
+        foreach ($this->getColVentasRealizadas() as $venta) {
+            foreach ($venta->getRefColeccionMotos() as $moto) {
+                if($moto instanceof MotoImportada){
+                    $colMotosImportadas[] = $venta;
+                }
             }
         }
         return $colMotosImportadas;
@@ -188,9 +190,6 @@ class Empresa {
 
     public function __toString()
     {
-        foreach ($this->informarVentasImportadas() as $motoImportada) {
-            echo $motoImportada . "\n";
-        }
         return "DENOMINACION: " . $this->getDenominacion() . "\n" .
         " DIRECCION: " . $this->getDireccion() . "\n" . 
         "Informacion suma de venta nacional: $" . $this->informarSumaVentasNacionales() . "\n";

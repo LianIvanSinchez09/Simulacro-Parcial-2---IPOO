@@ -29,7 +29,7 @@ class MotoImportada extends Moto {
 
     public function __toString()
     {
-        parent::__toString();
-        return "Impuesto Moto Importada: " . $this->getImpuesto();
+        echo "Tipo: Importada\n";
+        return parent::__toString() . "\n" . "Impuesto Moto Importada: " . $this->getImpuesto() . "\n";
     }
 }

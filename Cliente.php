@@ -98,6 +98,7 @@ class Cliente {
      */
     public function __toString()
     {
+        echo "------------------Info cliente------------------------------\n";
         return "NOMBRE CLIENTE: " . $this->getNombreCliente() . "\n" . 
         "APELLIDO DEL CLIENTE: " . $this->getApellido() . "\n" .
         "FUE DADO DE BAJA: " . $this->getEsDadoDeBaja() . "\n" . 
