@@ -19,4 +19,9 @@ class MotoNacional extends Moto {
         $this->descuento = $value;
     }
 
+    public function __toString()
+    {
+        parent::__toString();
+        return "Descuento Moto Nacional: " . $this->getDescuento();
+    }
 }

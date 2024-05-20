@@ -10,6 +10,7 @@ class MotoImportada extends Moto {
     {
         parent::__construct($codigo, $costo, $anioFabricacion, $descripcionMoto, $porcentajeIncAnual, $esActivo);
         $this->paisImportado = $paisImportado;
+        $this->impuesto = $impuesto;
     }
 
     public function getPaisImportado() {
@@ -24,5 +25,11 @@ class MotoImportada extends Moto {
     }
     public function setImpuesto($value) {
       $this->impuesto = $value;
+    }
+
+    public function __toString()
+    {
+        parent::__toString();
+        return "Impuesto Moto Importada: " . $this->getImpuesto();
     }
 }
